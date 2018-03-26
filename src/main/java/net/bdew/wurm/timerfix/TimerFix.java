@@ -16,7 +16,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
-public class TimerFix implements WurmMod, Initable, PreInitable, ServerStartedListener, Configurable {
+public class TimerFix implements WurmServerMod, Initable, PreInitable, ServerStartedListener, Configurable {
     private static final Logger logger = Logger.getLogger("TimerFix");
 
     enum Patches {
@@ -271,7 +271,7 @@ public class TimerFix implements WurmMod, Initable, PreInitable, ServerStartedLi
                         classPool,
                         "com.wurmonline.server.behaviours.MethodsItems",
                         "colorItem",
-                        "(Lcom/wurmonline/server/creatures/Creature;Lcom/wurmonline/server/items/Item;Lcom/wurmonline/server/items/Item;Lcom/wurmonline/server/behaviours/Action;)Z",
+                        "(Lcom/wurmonline/server/creatures/Creature;Lcom/wurmonline/server/items/Item;Lcom/wurmonline/server/items/Item;Lcom/wurmonline/server/behaviours/Action;Z)Z",
                         true, true, false
                 );
 
